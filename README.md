@@ -1,5 +1,9 @@
 # AI Traffic Cop Pro: AI-Powered Traffic Violation Detection
-
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![PostgreSQL](https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white)
 ## Overview
 AI Traffic Cop Pro is an intelligent, web-based platform designed to monitor live traffic camera feeds. It leverages computer vision to automatically detect traffic violations—such as missing helmets, absent seatbelts, and overspeeding—and streamlines the e-challan generation process for traffic authorities.
 
@@ -103,6 +107,30 @@ erDiagram
 * **Backend & AI Service:** Python, FastAPI, YOLOv8, OpenCV, EasyOCR
 * **Database:** PostgreSQL
 * **Other Tools:** GitHub, Render (for deployment)
+
+## 🚀 How to Run Locally
+
+### 1. Clone the Repository
+\`\`\`bash
+git clone https://github.com/DeepakDoss/AI-Traffic-Cop-Pro-AI-Powered-Traffic-Violation-Detection.git
+\`\`\`
+
+### 2. Start the FastAPI Backend (AI Processing)
+Navigate to your backend directory, install the Python dependencies, and start the server:
+\`\`\`bash
+cd cop
+pip install -r requirements.txt
+uvicorn main:app --reload
+\`\`\`
+
+### 3. Start the React Frontend (Dashboard)
+Open a new terminal, navigate to your frontend directory, and start the UI:
+\`\`\`bash
+cd Traffic
+npm install
+npm run dev
+\`\`\`
+*The dashboard will now be live on `localhost:5173` (or 3000).*
 
 ## Future Enhancements
 
