@@ -1,0 +1,33 @@
+# ============================================================
+#  Traffic Cop Pro — Python Backend Dependencies
+# ============================================================
+#
+#  Install with:
+#      pip install -r requirements.txt
+#
+#  Python >= 3.9 recommended.
+# ============================================================
+
+# Web framework & ASGI server
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+
+# File upload / form handling (FastAPI dependency)
+python-multipart==0.0.9
+
+# Computer Vision
+opencv-python==4.9.0.80
+
+# YOLOv8 object detection
+ultralytics==8.2.18
+
+# Optical Character Recognition
+easyocr==1.7.1
+
+# Numerical computing (required by YOLO & EasyOCR)
+numpy==1.26.4
+
+# PyTorch — required by EasyOCR and Ultralytics
+# CPU-only build (replace with the CUDA variant if you have a GPU)
+torch==2.3.0
+torchvision==0.18.0
