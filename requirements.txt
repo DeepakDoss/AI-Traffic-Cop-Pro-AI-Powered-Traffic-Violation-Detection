@@ -16,7 +16,7 @@ uvicorn[standard]==0.29.0
 python-multipart==0.0.9
 
 # Computer Vision
-opencv-python==4.9.0.80
+opencv-python-headless==4.9.0.80
 
 # YOLOv8 object detection
 ultralytics==8.2.18
