@@ -38,7 +38,6 @@ import numpy as np
 import torch
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
 from ultralytics import YOLO
 
 # ---------------------------------------------------------------------------
@@ -507,16 +506,6 @@ async def upload_video(file: UploadFile = File(...)) -> dict[str, Any]:
         "status": "success",
         "detections": detections,
     }
-
-
-# ---------------------------------------------------------------------------
-# Serve Frontend Static Files
-# ---------------------------------------------------------------------------
-frontend_dist = BASE_DIR / "Traffic" / "dist"
-if frontend_dist.exists() and frontend_dist.is_dir():
-    app.mount("/", StaticFiles(directory=str(frontend_dist), html=True), name="static")
-else:
-    logger.warning("Frontend dist folder not found at %s. Ensure you have run 'npm run build' if deploying.", frontend_dist)
 
 
 # ---------------------------------------------------------------------------
