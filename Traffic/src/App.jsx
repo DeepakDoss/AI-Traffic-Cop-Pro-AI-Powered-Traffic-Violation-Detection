@@ -67,8 +67,9 @@ export default function App() {
   useEffect(() => {
     let intervalId;
     const checkHealth = async () => {
+      const API_URL = import.meta.env.VITE_API_URL || '';
       try {
-        const res = await fetch('/health');
+        const res = await fetch(`${API_URL}/health`);
         if (res.ok) {
           const data = await res.json();
           if (data.model_loaded) {
