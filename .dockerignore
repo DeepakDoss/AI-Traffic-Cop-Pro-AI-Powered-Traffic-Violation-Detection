@@ -1,0 +1,10 @@
+.git
+.gitignore
+__pycache__
+*.pyc
+temp_uploads/
+Traffic/node_modules/
+Traffic/dist/
+.venv
+venv/
+env/
